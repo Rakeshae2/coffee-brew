@@ -1,0 +1,613 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.intro img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    animation-name: intro;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-delay: 4ms;
+    display: inline-block;
+}
+@keyframes intro {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.intro-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(6, 6, 6);
+    text-align: center;
+    font-family: 'Jacques Francois Shadow', serif;
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation-name: text1;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-delay: 4ms;
+}
+@keyframes text1 {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+    }
+}
+.cup{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    animation: cup1 5s forwards;
+}
+.cup img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@keyframes cup1 {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+.drop{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: bottom;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    animation: drop1 5s forwards;
+}
+@keyframes drop1 {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+.com{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.intro-text2 {
+    position: relative;
+    color: rgb(6, 6, 6);
+    font-family: 'Jacques Francois Shadow', serif;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation-name: text2;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-delay: 4ms;
+}
+@keyframes text2 {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    bottom: 0%;
+}
+.icon-nav{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: rgba(247, 247, 247, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 24px;
+    color: rgb(6, 6, 6);
+}
+.icon-nav:hover{
+    transform: scale(1.1);
+    background-color: rgb(238, 158, 39);
+}
+.items{
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    position: relative;
+    height: auto;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 300px;
+}
+.item{
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.description {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+.box{
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    border: 2px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.icon1{
+    font-size: 2rem;
+    color: rgb(6, 6, 6);
+}
+.cards{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 150px;
+}
+.card_align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  flex-wrap: wrap;
+}
+/* From Uiverse.io by SachinKumar666 */ 
+.card {
+  --card-bg: #ffffff;
+  --card-accent: #7c3aed;
+  --card-text: #1e293b;
+  --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+
+  width: 190px;
+  height: 254px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+}
+
+.card__shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card__glow {
+  position: absolute;
+  inset: -10px;
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(124, 58, 237, 0.3) 0%,
+    rgba(124, 58, 237, 0) 70%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card__content {
+  padding: 1.25em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  position: relative;
+  z-index: 2;
+}
+
+.card__badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #10b981;
+  color: white;
+  padding: 0.25em 0.5em;
+  border-radius: 999px;
+  font-size: 0.7em;
+  font-weight: 600;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 0.4s ease 0.1s;
+}
+
+.card__image {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(45deg, #a78bfa, #8b5cf6);
+  border-radius: 12px;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;;
+}
+.card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.card__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 30%
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(139, 92, 246, 0.1) 0px,
+      rgba(139, 92, 246, 0.1) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+  opacity: 0.5;
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.card__title {
+  color: var(--card-text);
+  font-size: 1.1em;
+  margin: 0;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.card__description {
+  color: var(--card-text);
+  font-size: 0.75em;
+  margin: 0;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+
+
+
+/* Hover Effects */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: rgba(124, 58, 237, 0.2);
+}
+
+.card:hover .card__shine {
+  opacity: 1;
+  animation: shine 3s infinite;
+}
+
+.card:hover .card__glow {
+  opacity: 1;
+}
+
+.card:hover .card__badge {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+.card:hover .card__image {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover .card__title {
+  color: var(--card-accent);
+  transform: translateX(2px);
+}
+
+.card:hover .card__description {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+.card:hover .card__price {
+  color: var(--card-accent);
+  transform: translateX(2px);
+}
+
+.card:hover .card__button {
+  transform: scale(1);
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.2);
+}
+
+.card:hover .card__button svg {
+  animation: pulse 1.5s infinite;
+}
+
+/* Active State */
+.card:active {
+  transform: translateY(-5px) scale(0.98);
+}
+
+/* Animations */
+@keyframes shine {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.footer-text {
+    padding: 20px;
+    color: rgb(6, 6, 6);
+    font-family: 'Jacques Francois Shadow', serif;
+    font-size: 1.2rem;
+}
+.head{
+    position: relative;
+    width: 100%;
+    height: 70px;;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.head-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+    justify-content: start;
+}
+.head-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.head-text{
+    font-family: 'Jacques Francois Shadow', serif;
+    font-size: 2rem;
+    color: rgb(6, 6, 6);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.top-bar {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.top {
+    width: 100%;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+}
+.ic-left {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.icon-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon {
+    font-size: 24px;
+    color: rgb(6, 6, 6);
+    margin-left: 10px;
+    cursor: pointer;
+}
+.card__price {
+    color: var(--card-accent);
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.tab-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.tab {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Jacques Francois Shadow', serif;
+    font-size: 1.2rem;
+    color: rgb(6, 6, 6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+.tab:hover {
+    background-color: rgb(238, 158, 39);
+}
+.frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 70px;
+}
+.buttons-bar {
+    display: relative;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+.seconday {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: #1e293b 2px solid;
+    margin-bottom: 5px;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Jacques Francois Shadow', serif;
+    font-size: 1.2rem;
+    color: rgb(6, 6, 6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+.seconday:hover {
+    background-color: rgb(137, 225, 131);
+}
+.primary {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: #1e293b 2px solid;
+    cursor: pointer;
+    font-family: 'Jacques Francois Shadow', serif;
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgb(250, 247, 247);
+    background-color: rgb(6, 6, 6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
